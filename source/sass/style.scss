@@ -4,6 +4,7 @@
 @import "vendor/normalize";
 // Swiper 7.4.1
 // @import "vendor/swiper";
+@import "vendor/data-accordion";
 
 // Global
 // ---------------------------------
@@ -19,8 +20,8 @@
 // ---------------------------------
 
 // @import "components/btn";
-@import "components/button.scss";
-@import "components/logo.scss";
+@import "components/button";
+@import "components/logo";
 // @import "components/custom-input";
 // @import "components/custom-toggle";
 // @import "components/custom-select";
@@ -35,6 +36,8 @@
 @import "blocks/intro";
 //
 @import "blocks/features";
+//
+@import "blocks/about";
 
 // ---------------------------------
 

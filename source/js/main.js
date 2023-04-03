@@ -2,6 +2,10 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 
+import {initAccordions} from './modules/liga-accordions/init-accordion';
+import {initAboutButton} from './modules/liga-accordions/accordion-button';
+import {initAccordionTabindex} from './modules/liga-accordions/accordion-focus';
+
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -21,6 +25,10 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = new Form();
     window.form = form;
     form.init();
+
+    initAboutButton();
+    initAccordions();
+    initAccordionTabindex();
   });
 });
 

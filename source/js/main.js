@@ -8,6 +8,8 @@ import {initAccordionTabindex} from './modules/liga-accordions/accordion-focus';
 
 import {checkFirstSwiper, checkSecondSwiper, thirdSecondSwiper} from './vendor.js';
 
+import {scrollToProducts} from './modules/scroll-to';
+
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -19,6 +21,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Modules
   // ---------------------------------
+
+  scrollToProducts();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана

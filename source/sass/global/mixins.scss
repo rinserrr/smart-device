@@ -263,3 +263,37 @@
     z-index: 50;
   }
 }
+
+
+@mixin state-input {
+  &:focus,
+  &:focus-visible {
+    box-shadow: none;
+    outline: 0;
+  }
+
+  &:hover,
+  &:focus {
+    outline: 1px solid #f2f5f6;
+    outline-offset: -1px;
+    text-shadow: 0 0 8px var(--color-alice-blue2);
+  }
+
+  &:active {
+    background-color: var(--color-pacific-blue);
+    outline: 1px solid #f2f5f6;
+    outline-offset: -1px;
+  }
+
+  &:focus:not(:focus-visible) {
+    box-shadow: none;
+    outline: 0;
+  }
+
+  &:focus-visible {
+    outline: 1px solid #f2f5f6;
+    outline-offset: -1px;
+    box-shadow: 0 0 1px #f2f5f6, 0 0 2px #f2f5f6, 0 0 6px #f2f5f6, 0 0 6px #f2f5f6, inset 0 0 1px #f2f5f6, inset 0 0 2px #f2f5f6, inset 0 0 6px #f2f5f6, inset 0 0 6px #f2f5f6;
+    z-index: 50;
+  }
+}

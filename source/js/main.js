@@ -6,6 +6,8 @@ import {initAccordions} from './modules/liga-accordions/init-accordion';
 import {initAboutButton} from './modules/liga-accordions/accordion-button';
 import {initAccordionTabindex} from './modules/liga-accordions/accordion-focus';
 
+import {checkFirstSwiper, checkSecondSwiper, thirdSecondSwiper} from './vendor.js';
+
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -29,6 +31,10 @@ window.addEventListener('DOMContentLoaded', () => {
     initAboutButton();
     initAccordions();
     initAccordionTabindex();
+
+    checkFirstSwiper();
+    checkSecondSwiper();
+    thirdSecondSwiper();
   });
 });
 

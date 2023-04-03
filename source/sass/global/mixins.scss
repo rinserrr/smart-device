@@ -228,3 +228,38 @@
     z-index: 50;
   }
 }
+
+
+@mixin state-link-goods {
+  &:focus,
+  &:focus-visible {
+    box-shadow: none;
+    outline: 0;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 1px #00b2ff, 0 0 2px #00b2ff, 0 0 6px #00b2ff, 0 0 6px #00b2ff, inset 0 0 1px #00b2ff, inset 0 0 2px #00b2ff, inset 0 0 6px #00b2ff, inset 0 0 6px #00b2ff;
+  }
+
+  &:active {
+    text-shadow: 0 0 8px var(--color-alice-blue2);
+    box-shadow: 0 0 1px #f2f5f6, 0 0 2px #f2f5f6, 0 0 6px #f2f5f6, 0 0 6px #f2f5f6, inset 0 0 1px #f2f5f6, inset 0 0 2px #f2f5f6, inset 0 0 6px #f2f5f6, inset 0 0 6px #f2f5f6;
+  }
+
+  &:disabled {
+    color: var(--color-alice-blue2);
+    background-color: var(--color-alice-blue2);
+  }
+
+  &:focus:not(:focus-visible) {
+    box-shadow: none;
+    outline: 0;
+  }
+
+  &:focus-visible {
+    box-shadow: 0 0 1px #00b2ff, 0 0 2px #00b2ff, 0 0 6px #00b2ff, 0 0 6px #00b2ff, inset 0 0 1px #00b2ff, inset 0 0 2px #00b2ff, inset 0 0 6px #00b2ff, inset 0 0 6px #00b2ff;
+    outline-offset: -2px;
+    z-index: 50;
+  }
+}

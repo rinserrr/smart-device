@@ -1,0 +1,230 @@
+@mixin retina {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @content;
+  }
+}
+
+@mixin hover {
+  @media (hover: hover) {
+    &:hover:not(.focus-visible) {
+      @content;
+    }
+  }
+}
+
+@mixin focus {
+  &.focus-visible:focus {
+    @content;
+  }
+}
+
+@mixin active {
+  &.focus-visible:active {
+    @content;
+  }
+}
+
+@mixin hover-focus {
+  @media (hover: hover) {
+    &:hover:not(.focus-visible) {
+      @content;
+    }
+  }
+
+  &.focus-visible:focus {
+    @content;
+  }
+}
+
+// Desktop first
+
+@mixin vp-1919 {
+  @media (max-width: ($vp-1920 - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-1439 {
+  @media (max-width: ($vp-1440 - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-1279 {
+  @media (max-width: ($vp-1280 - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-1023 {
+  @media (max-width: ($vp-1024 - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-767 {
+  @media (max-width: ($vp-768 - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-374 {
+  @media (max-width: ($vp-375 - 1px)) {
+    @content;
+  }
+}
+
+// Mobile first
+
+// @mixin vp-375 {
+//   @media (min-width: $vp-375) {
+//     @content;
+//   }
+// }
+
+// @mixin vp-768 {
+//   @media (min-width: $vp-768) {
+//     @content;
+//   }
+// }
+
+// @mixin vp-1024 {
+//   @media (min-width: $vp-1024) {
+//     @content;
+//   }
+// }
+
+// @mixin vp-1280 {
+//   @media (min-width: $vp-1280) {
+//     @content;
+//   }
+// }
+
+// @mixin vp-1440 {
+//   @media (min-width: $vp-1440) {
+//     @content;
+//   }
+// }
+
+// @mixin vp-1920 {
+//   @media (min-width: $vp-1920) {
+//     @content;
+//   }
+// }
+
+// ---------------------------------
+
+// не нужно добавлять свои миксины для ресета списков, обнуления кнопок и прочие
+// этим вы усложняете работу команды, проверку вашего кода и будущую поддержку проекта
+
+
+@mixin noselect {
+  /* iOS Safari */
+  -webkit-touch-callout: none;
+  /* Safari */
+  -webkit-user-select: none;
+  /* Konqueror HTML */
+  -khtml-user-select: none;
+  /* Old versions of Firefox */
+  -moz-user-select: none;
+  /* Internet Explorer/Edge */
+  -ms-user-select: none;
+  /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+  user-select: none;
+}
+
+
+@mixin state-link {
+  &:focus,
+  &:focus-visible {
+    box-shadow: none;
+    outline: 0;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--color-pacific-blue);
+    text-shadow: 0 0 8px var(--color-pacific-blue);
+    background-color: transparent;
+
+    svg {
+      color: var(--color-pacific-blue);
+      filter: drop-shadow(0 0 2px var(--color-pacific-blue));
+    }
+  }
+
+  &:active {
+    color: var(--color-cerulean);
+    text-shadow: 0 0 8px var(--color-cerulean);
+
+    svg {
+      color: var(--color-cerulean);
+      filter: drop-shadow(0 0 2px var(--color-cerulean));
+    }
+  }
+
+  &:disabled {
+    color: var(--color-alice-blue2);
+    background-color: var(--color-alice-blue2);
+
+    svg {
+      color: var(--color-alice-blue2);
+      filter: drop-shadow(0 0 2px var(--color-alice-blue2));
+    }
+  }
+
+  &:focus:not(:focus-visible) {
+    box-shadow: none;
+    outline: 0;
+  }
+
+  &:focus-visible {
+    box-shadow: 0 0 1px #00b2ff, 0 0 2px #00b2ff, 0 0 6px #00b2ff, 0 0 6px #00b2ff, inset 0 0 1px #00b2ff, inset 0 0 2px #00b2ff, inset 0 0 6px #00b2ff, inset 0 0 6px #00b2ff;
+    outline-offset: -2px;
+    z-index: 50;
+  }
+}
+
+
+@mixin state-button {
+  &:focus,
+  &:focus-visible {
+    box-shadow: none;
+    outline: 0;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--color-pacific-blue);
+    text-shadow: 0 0 8px var(--color-pacific-blue);
+    border: 1px solid var(--color-pacific-blue);
+    background-color: transparent;
+  }
+
+  &:active {
+    color: var(--color-cerulean);
+    border: 1px solid var(--color-cerulean);
+  }
+
+  &:disabled {
+    color: var(--color-alice-blue2);
+    background-color: var(--color-alice-blue2);
+
+    svg {
+      color: var(--color-alice-blue2);
+      filter: drop-shadow(0 0 2px var(--color-alice-blue2));
+    }
+  }
+
+  &:focus:not(:focus-visible) {
+    box-shadow: none;
+    outline: 0;
+  }
+
+  &:focus-visible {
+    border: 1px solid #00b2ff;
+    box-shadow: 0 0 1px #00b2ff, 0 0 2px #00b2ff, 0 0 6px #00b2ff, 0 0 6px #00b2ff, inset 0 0 1px #00b2ff, inset 0 0 2px #00b2ff, inset 0 0 6px #00b2ff, inset 0 0 6px #00b2ff;
+    outline-offset: -2px;
+    z-index: 50;
+  }
+}

@@ -8,21 +8,30 @@
 // Global
 // ---------------------------------
 
-@import "variables";
-@import "mixins";
+@import "global/variables";
+@import "global/mixins";
 @import "global/fonts";
 @import "global/reboot";
 @import "global/utils";
 @import "global/container";
 
-// Blocks
+// Components
 // ---------------------------------
 
-@import "blocks/btn";
+// @import "components/btn";
+@import "components/button.scss";
+@import "components/logo.scss";
+// @import "components/custom-input";
+// @import "components/custom-toggle";
+// @import "components/custom-select";
+
+// Blocks
+// ---------------------------------
+//
+@import "blocks/header";
+//
 @import "blocks/modal";
-@import "blocks/custom-input";
-@import "blocks/custom-toggle";
-@import "blocks/custom-select";
+
 
 // ---------------------------------
 

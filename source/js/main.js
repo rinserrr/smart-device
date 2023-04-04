@@ -10,6 +10,8 @@ import {checkFirstSwiper, checkSecondSwiper, thirdSecondSwiper} from './vendor.j
 
 import {scrollToProducts} from './modules/scroll-to';
 
+import {openAccordion} from './modules/accordion';
+
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -39,6 +41,8 @@ window.addEventListener('DOMContentLoaded', () => {
     checkFirstSwiper();
     checkSecondSwiper();
     thirdSecondSwiper();
+
+    openAccordion();
   });
 });
 

@@ -1,0 +1,24 @@
+.footer {
+  background-color: var(--color-black-pearl);
+}
+
+.footer__container {
+  margin: 0 auto;
+  padding: 50px 40px 55px 40px;
+  min-width: 320px;
+  max-width: 1300px;
+  display: flex;
+  background-color: var(--color-black-pearl);
+
+  @include vp-1023 {
+    padding-bottom: 65px;
+    flex-wrap: wrap;
+  }
+
+  @include vp-767 {
+    padding: 35px 0 35px 0;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+}

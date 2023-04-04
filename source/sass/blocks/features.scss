@@ -1,0 +1,177 @@
+.features {
+  margin-bottom: 120px;
+
+  @include vp-1023 {
+    margin-bottom: 75px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 45px;
+  }
+}
+
+.features__list {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  list-style: none;
+  position: relative;
+
+  @include vp-1023 {
+    grid-template-columns: repeat(2, 1fr);
+    left: -5px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    left: 0;
+  }
+}
+
+.features__item {
+  margin: 0;
+  padding: 39px 19px 20px 43px;
+  min-height: 300px;
+
+  border: 1px solid var(--color-whisper);
+  border-left: 5px solid var(--color-deep-sky-blue);
+  cursor: default;
+  transition: 0.3s;
+  position: relative;
+
+  @include vp-1023 {
+    padding: 40px 36px 28px 40px;
+    min-height: 360px;
+  }
+
+  @include vp-767 {
+    padding: 30px 30px 0 25px;
+    min-height: 340px;
+  }
+}
+
+.features__item-icon {
+  width: 35px;
+  height: 35px;
+  color: var(--color-deep-sky-blue);
+
+  @include vp-767 {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.features__item h3 {
+  margin: 0;
+  padding: 14px 0 14px;
+
+  font-family: $ff-roboto;
+  font-size: 24px;
+  line-height: 33.6px;
+  color: var(--color-deep-sky-blue);
+
+  @include vp-1023 {
+    padding: 7px 0 8px;
+  }
+
+  @include vp-767 {
+    padding: 9px 0 9px;
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+.features__item p {
+  margin: 0;
+  font-family: $ff-ptmono;
+  font-size: 16px;
+  line-height: 21.6px;
+  color: var(--color-black-pearl);
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+.features__item--privacy {
+  h3 {
+    position: relative;
+    left: -2px;
+
+    @include vp-1023 {
+      top: -1px;
+      left: 0;
+    }
+
+    @include vp-767 {
+      top: 3px;
+    }
+  }
+
+  p {
+    position: relative;
+    left: -2px;
+
+    @include vp-1023 {
+      top: -2px;
+      left: 2px;
+    }
+
+    @include vp-767 {
+      top: 5px;
+      left: 0;
+    }
+  }
+
+  @include vp-767 {
+    min-height: 325px;
+  }
+}
+
+.features__item--tag {
+  h3 {
+    position: relative;
+
+    @include vp-1023 {
+      top: -3px;
+    }
+
+    @include vp-767 {
+      top: 3px;
+      left: 0;
+    }
+  }
+
+  p {
+    position: relative;
+
+    @include vp-1023 {
+      top: -8px;
+      left: 2px;
+    }
+
+    @include vp-767 {
+      top: 5px;
+      left: 0;
+    }
+  }
+
+  @include vp-767 {
+    min-height: 325px;
+  }
+}
+
+.features__item:hover {
+  background-color: var(--color-deep-sky-blue);
+
+  * {
+    color: var(--color-default-white);
+  }
+
+  svg {
+    fill: var(--color-default-white);
+  }
+}

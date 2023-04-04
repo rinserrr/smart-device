@@ -1,0 +1,59 @@
+.accordion-title {
+  overflow: hidden;
+  display: block;
+  position: relative;
+
+  @include vp-767 {
+    margin: 0;
+    padding: 21px 0;
+    width: 100%;
+    min-height: 60px;
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      content: "";
+      right: 0;
+      top: 50%;
+      width: 15px;
+      height: 2px;
+      background-color: var(--color-alice-blue3);
+      transform: translateY(-50%);
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      right: 6px;
+      top: 50%;
+      width: 2px;
+      height: 15px;
+      background-color: var(--color-alice-blue3);
+      transform: translateY(-50%);
+      transition: 0.3 opacity;
+    }
+  }
+
+  &.active::after {
+    opacity: 0;
+  }
+
+  &--none {
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.accordion-wrap {
+  @include vp-767 {
+    overflow: hidden;
+    max-height: 0;
+    transition: 0.3s max-height ease-out;
+
+    &.no-js {
+      max-height: 100%;
+    }
+  }
+}

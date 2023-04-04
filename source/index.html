@@ -370,28 +370,51 @@
   <div class="modal modal--preload" data-modal="feedback">
     <div class="modal__wrapper">
       <div class="modal__overlay" data-close-modal></div>
-      <div class="modal__content">
-        <p class="modal__description">Обычная модалка</p>
-        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-          <svg width="15" height="15">
-            <use xlink:href="img/sprite.svg#icon-close"></use>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div>
 
-  <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-    <div class="modal__wrapper">
-      <div class="modal__overlay" data-close-modal></div>
-      <div class="modal__content">
-        <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
+      <div class="modal__content ">
+        <div class="form__container form__container--modal" data-form-validate>
+          <form action="https://echo.htmlacademy.ru/" method="post">
+            <h2>Закажите звонок</h2>
+            <p>Оставьте контакты, мы&nbsp;проконсультируем <br>вас бесплатно в&nbsp;удобное время</p>
+
+            <div class="form__inputs-wrapper form__inputs-wrapper--modal">
+              <label for="modal-name" data-required data-validate-type="text" data-limitation="name"
+                data-message-base="Поле обязательно к заполнению">
+                <input type="text" name="name" id="modal-name" placeholder="Имя" minlength="1" required>
+              </label>
+
+              <label for="modal-phone" data-required data-on-input-validate data-validate-type="phone"
+                data-message-base="Поле обязательно к заполнению"
+                data-message-extra="Проверьте корректность заполнения поля">
+                <input type="tel" name="phone" id="modal-phone" placeholder="Телефон" required>
+              </label>
+
+              <div class="form__wide-input-wrapper form__wide-input-wrapper--modal">
+                <label>
+                  <textarea name="question" id="modal-question" placeholder="Ваш вопрос"></textarea>
+                </label>
+              </div>
+
+              <div class="form__personal-checkbox-wrapper form__personal-checkbox-wrapper--modal">
+                <label for="modal-personal" data-validate-type="checkbox"
+                  data-message-base="Поле обязательно к заполнению">
+                  <input id="modal-personal" type="checkbox" name="personal-data" required checked>
+                  <span class="form__checkbox-mark"></span>
+                  <span>Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
+                </label>
+              </div>
+
+              <button class="button form__button form__button--modal" type="submit">Отправить</button>
+            </div>
+          </form>
+        </div>
         <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-          <svg width="15" height="15">
+          <svg width="20" height="20">
             <use xlink:href="img/sprite.svg#icon-close"></use>
           </svg>
         </button>
       </div>
+
     </div>
   </div>
 

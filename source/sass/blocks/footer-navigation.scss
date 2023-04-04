@@ -38,16 +38,20 @@
   display: block;
   list-style-type: none;
 
-  column-count: 2;
   column-width: 220px;
+  column-count: 2;
+  // column-gap: 3%;
+  // .navigation__item {
+  //   max-width: 248px;
+  // }
 
   @include vp-1023 {
     column-count: 1;
   }
 }
 
-.footer__navigation-item:last-child {
-  @include noselect;
+.footer__navigation-item:nth-child(4) {
+  break-before: avoid;
 }
 
 .footer__navigation-link {
